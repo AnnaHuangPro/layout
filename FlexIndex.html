@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex布局</title>
+    <style>
+        header{width: 100%;height: 40px;background-color: darkseagreen;}
+        .container{display: flex;min-height: 200px;}
+        .middle{min-height: 200px;background-color: deeppink;flex-grow:1;}
+        .left{min-height: 200px;background-color: blue;order: -1;flex-basis:200px;}
+        .right{min-height: 200px;background-color: darkorchid;flex-basis:200px;}
+        footer{width: 100%; height: 30px;background-color: darkslategray;}
+    </style>
+</head>
+<body>
+<header><h4>Header内容区</h4></header>
+<div class="container">
+    <div class="middle"><h4>中间弹性区</h4>中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间中间</div>
+    <div class="left"><h4>左边栏</h4></div>
+    <div class="right"><h4>右边栏</h4></div>
+</div>
+<footer><h4>Footer内容区</h4></footer>
+</body>
+</html>
+
+<!--步骤
+    1.将父容器 display:flex 那么下属的3个子元素自动成为容器成员成为Flex(flex item) 简称"项目"
+    2.设置left的order:-1 设置项目的排序方式
+    3.通过项目属性flex-grow设置main的放大比例，将空余的空间用main来填充，使三个项目不满一整行；默认为0，也就是对剩余空间不做处理。
+    4.flex-basis来设置left和right的固定宽度
+
+    大功告成-->
+
+<!-- flex-basis
+    content - > width - > flex-basis（由max | min-width限制）
+-->
